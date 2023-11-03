@@ -1,6 +1,6 @@
 
 
-// show the user the average starting price of all the freelancers (Function)
+
 //create h2 for available freelancers 
 
 
@@ -22,8 +22,16 @@ const getAverage = () => {
 };
 //create body document 
 body = document.body 
+body.setAttribute("style", "border : 2px solid black" )
 
 //create headline for home page 
 const h1tag = document.createElement("h1");
 h1tag.textContent = "Freelancer Forum";
 body.append(h1tag);
+h1tag.setAttribute("style", "margin:auto; width:50%; text-align:center;");
+
+// show the user the average starting price of all the freelancers (Function)
+const functionSection = document.createElement("section");
+functionSection.textContent = `The average starting price is $ ${getAverage()}.`;
+body.append(functionSection);
+functionSection.setAttribute("style", "margin:auto; width:50%; text-align:center; text-decoration:underline; font-size: larger;");
